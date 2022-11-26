@@ -75,7 +75,7 @@ module.exports = async (client, message) => {
             .setFooter(ee.footertext, ee.footericon)
             .setTitle("❌ Error | You are not allowed to run this command!")
             .setDescription(`You need these Permissions: \`${command.memberpermissions.join("`, ``")}\``)
-          ).then(msg=>msg.delete({timeout: 5000}).catch(e=>console.log("Couldn't Delete --> Ignore".gray)));
+          ).then(msg=>msg.delete({timeout: 5000}).catch(e=>{}));
         }
         //if the Bot has not enough permissions return error
         let required_perms = ["ADD_REACTIONS","PRIORITY_SPEAKER","VIEW_CHANNEL","SEND_MESSAGES",
@@ -107,7 +107,7 @@ module.exports = async (client, message) => {
       .setFooter(ee.footertext, ee.footericon)
       .setTitle(`❌ Unkown command, try: **\`${prefix}help\`**`)
       .setDescription(`To get help on a specific command, type \`${prefix}help [command name]\``)
-    ).then(msg=>msg.delete({timeout: 5000}).catch(e=>console.log("Couldn't Delete --> Ignore".gray)));
+    ).then(msg=>msg.delete({timeout: 5000}).catch(e=>{}));
   }catch (e){
     return message.channel.send(
     new MessageEmbed()
