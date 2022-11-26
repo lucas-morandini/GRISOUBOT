@@ -1,10 +1,11 @@
-const { MessageEmbed, MessageAttachment } = require("discord.js");
+const { MessageEmbed, MessageAttachment, SystemChannelFlags } = require("discord.js");
 const config = require("../../botconfig/config.json");
 const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 const fs = require("fs");
+console.log(fs.readdirSync("./assets/img").length);
 const boubouleImg = new MessageAttachment('./assets/img/bouboule_' + fs.readdirSync("./assets/img").length + '.jpg');
-print(fs.readdirSync("./assets/img").length);
+
 module.exports = {
     name: "bouboule",
     category: "Images",
@@ -16,6 +17,7 @@ module.exports = {
         try {
             message.channel.send(new MessageEmbed()
                 .attachFiles(boubouleImg)
+                .setDescription(`**${message.author.username}** a commandé une bouboule`)
             );
         } catch (e) {
             console.log(String(e.stack).bgRed)
