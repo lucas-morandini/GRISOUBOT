@@ -3,7 +3,7 @@ const Discord = require("discord.js"); //this is the official discord.js wrapper
 const fs = require("fs"); //this package is for reading files and getting their inputs
 
 //Creating the Discord.js Client for This Bot with some default settings ;) and with partials, so you can fetch OLD messages
-const client = new Discord.Client({
+const client = new Discord.Client({ 
   messageCacheLifetime: 60,
   fetchAllMembers: false,
   messageCacheMaxSize: 10,
