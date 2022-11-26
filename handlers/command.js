@@ -2,7 +2,7 @@ const { readdirSync } = require("fs");
 const ascii = require("ascii-table");
 let table = new ascii("Commands");
 table.setHeading("Command", "Load status");
-console.log("Welcome to SERVICE HANDLER /--/ By https://milrato.eu /--/ Discord: Tomato#6966".yellow);
+
 module.exports = (client) => {
   try{
     readdirSync("./commands/").forEach((dir) => {
@@ -19,7 +19,7 @@ module.exports = (client) => {
             if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach((alias) => client.aliases.set(alias, pull.name));
         }
     });
-    console.log(table.toString().cyan);
+    
   }catch (e){
     console.log(String(e.stack).bgRed)
   }
