@@ -1,12 +1,16 @@
 {
-  "name": "discord-js-handler-template",
+  "name": "discord.js-grisou",
   "version": "1.0.0",
-  "description": "Discord.js Command and Event Handler Template with example Command usages!",
+  "description": "Bot grisou",
   "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Tomato#6966 (author of this template)",
+  "author": "Grisou",
   "license": "ISC",
   "dependencies": {
     "@discordjs/rest": "^1.3.0",
