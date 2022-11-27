@@ -4,7 +4,7 @@ const ee = require("../../botconfig/embed.json");
 const { duration } = require("../../handlers/functions")
 const fs = require("fs");
 console.log(fs.readdirSync("./assets/img").length);
-const boubouleImg = new MessageAttachment('./assets/img/bouboule_' + fs.readdirSync("./assets/img").length + '.jpg');
+const boubouleImg = new MessageAttachment('./assets/img/bouboule (' + fs.readdirSync("./assets/img").length + ').jpg');
 
 module.exports = {
     name: "bouboule",
